@@ -3,6 +3,8 @@ function readAll(file)
 	local content = f:read("*all")
 	f:close()
 	return content
-  end
+end
+
+shell.run("wget https://raw.githubusercontent.com/Hac3d/opus/develop-1.8/changelog changelog.txt")
   
-  print(readAll("https://raw.githubusercontent.com/Hac3d/opus/develop-1.8/changelog"))
+print(readAll("changelog.txt"))
