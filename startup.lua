@@ -29,10 +29,10 @@ local function loadBootOptions()
 			preload = { },
 			menu = {
 				{ prompt = os.version() },
-				{ prompt = 'Opus'         , args = { '/sys/boot/opus.lua' } },
-				{ prompt = 'Opus Shell'   , args = { '/sys/boot/opus.lua', '/sys/apps/shell.lua' } },
-				{ prompt = 'Opus Kiosk'   , args = { '/sys/boot/kiosk.lua' } },
-				{ prompt = 'Opus TLCO'    , args = { '/sys/boot/tlco.lua' } },
+				{ prompt = 'pocketOS'         , args = { '/sys/boot/opus.lua' } },
+				{ prompt = 'pocketOS Shell'   , args = { '/sys/boot/opus.lua', '/sys/apps/shell.lua' } },
+				{ prompt = 'pocketOS Kiosk'   , args = { '/sys/boot/kiosk.lua' } },
+				{ prompt = 'pocketOS TLCO'    , args = { '/sys/boot/tlco.lua' } },
 			},
 		}))
 		f.close()
@@ -72,7 +72,7 @@ local function startupMenu()
 	local align, selected = 0, bootOption
 
 	local function redraw()
-		local title = "Boot Options:"
+		local title = "Recvoery Options:"
 		term.clear()
 		term.setTextColor(colors.white)
 		term.setCursorPos((x/2)-(#title/2), (y/2)-(#bootOptions.menu/2)-1)
@@ -133,7 +133,7 @@ local function splash()
 
 	term.setTextColor(colors.white)
 	if not term.isColor() then
-		local str = 'Opus OS'
+		local str = 'pocketOS'
 		term.setCursorPos((w - #str) / 2, h / 2)
 		term.write(str)
 	else
@@ -158,7 +158,7 @@ local function splash()
 		end
 	end
 
-	local str = 'Press any key for menu'
+	local str = 'Press any key for recovery'
 	term.setCursorPos((w - #str) / 2, h)
 	term.write(str)
 end
