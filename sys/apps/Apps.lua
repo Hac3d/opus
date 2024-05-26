@@ -16,7 +16,7 @@ local page = UI.Page {
 		x = 2, ex = 14, y = 2, ey = -6,
 		values = { },
 		columns = {
-			{ heading = 'App', key = 'name' },
+			{ heading = 'App Name', key = 'name' },
 		},
 		sortColumn = 'name',
 		autospace = true,

@@ -1,8 +1,8 @@
 {
 	[ "0a999012ffb87b3edac99adbdfc498b12831a1e2" ] = {
-		title = "Packages",
+		title = "Apps",
 		category = "System",
-		run = "PackageManager.lua",
+		run = "Apps.lua",
 		iconExt = "\030c\0317\151\131\131\131\0307\031c\148\010\030c\0317\151\131\0310\143\0317\131\0307\031c\148\010\0307\031c\138\030 \0317\151\131\131\131",
 	},
 	[ "b2efeaa1a7d6d2185ea02473cf758203dfcea3fe" ] = {
