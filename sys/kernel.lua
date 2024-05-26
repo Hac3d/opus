@@ -306,7 +306,7 @@ local function init(...)
 
 	local runLevel = #args > 0 and 6 or 7
 
-	print('Starting Opus OS')
+	print('Starting pocketOS')
 	local dir = 'sys/init'
 	local files = fs.list(dir)
 	table.sort(files)

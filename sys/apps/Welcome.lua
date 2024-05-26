@@ -9,8 +9,8 @@ local shell    = _ENV.shell
 
 local splashIntro = [[First Time Setup
 
-%sThanks for installing Opus OS. The next screens will prompt you for basic settings for this computer.]]
-local labelIntro = [[Set a friendly name for this computer.
+%sThanks for using a pocketPhone! The next screens will prompt you for basic settings for this phone.]]
+local labelIntro = [[Set a friendly name for this device.
 
 %sNo spaces recommended.]]
 local passwordIntro = [[A password is required for wireless access.
@@ -18,7 +18,7 @@ local passwordIntro = [[A password is required for wireless access.
 %sLeave blank to skip.]]
 local packagesIntro = [[Setup Complete
 
-%sOpen the package manager to add software to this computer.]]
+%sOpen the App Store to add software to this device.]]
 local contributorsIntro = [[Contributors%s
 
 Anavrins:    Encryption/security/custom apps
@@ -28,7 +28,7 @@ LDDestroier: Art design + custom apps
 Lemmmy:      Application improvements
 
 %sContribute at:%s
-https://github.com/kepler155c/opus]]
+https://github.com/hac3d/opus]]
 
 local page = UI.Page {
 	wizard = UI.Wizard {
@@ -95,7 +95,7 @@ local page = UI.Page {
 			index = 4,
 			button = UI.Button {
 				x = 3, y = -3,
-				text = 'Open Package Manager',
+				text = 'Open App Store',
 				event = 'packages',
 			},
 			intro = UI.TextArea {
