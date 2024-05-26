@@ -39,7 +39,7 @@ function UI:init()
 	self.devices = { }
 	self.theme = {
 		colors = {
-			primary = colors.green,
+			primary = colors.orange,
 			secondary = colors.lightGray,
 			tertiary = colors.gray,
 		}
