@@ -7,7 +7,7 @@ local Util     = require('opus.util')
 local colors   = _G.colors
 local term     = _G.term
 
-UI:configure('App Store', ...)
+UI:configure('Apps', ...)
 
 local config = Config.load('package')
 
@@ -16,11 +16,11 @@ local page = UI.Page {
 		x = 2, ex = 14, y = 2, ey = -6,
 		values = { },
 		columns = {
-			{ heading = 'Package', key = 'name' },
+			{ heading = 'App', key = 'name' },
 		},
 		sortColumn = 'name',
 		autospace = true,
-		help = 'Select a package',
+		help = 'Select an app',
 	},
 	add = UI.Button {
 		x = 2, y = -3,
@@ -40,7 +40,7 @@ local page = UI.Page {
 		ex = -2, y = -3, width = 12,
 		text = 'Update All',
 		event = 'updateall',
-		help = 'Update all installed packages',
+		help = 'Update all installed apps',
 	},
 	description = UI.TextArea {
 		x = 16, y = 3, ey = -5,
@@ -100,7 +100,7 @@ function page:loadPackages()
 		selected = self.grid:getSelected(),
 		element = self.grid,
 	})
-	self.statusBar:setStatus('Updated packages')
+	self.statusBar:setStatus('Updated apps')
 end
 
 function page.grid:getRowTextColor(row, selected)

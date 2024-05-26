@@ -95,7 +95,7 @@ local page = UI.Page {
 			index = 4,
 			button = UI.Button {
 				x = 3, y = -3,
-				text = 'Open App Store',
+				text = 'Open Apps',
 				event = 'packages',
 			},
 			intro = UI.TextArea {
@@ -126,7 +126,7 @@ function page:eventHandler(event)
 		event.view:focusFirst()
 
 	elseif event.type == 'packages' then
-		shell.openForegroundTab('PackageManager')
+		shell.openForegroundTab('Apps')
 
 	elseif event.type == 'wizard_complete' or event.type == 'cancel' then
 		UI:quit()
